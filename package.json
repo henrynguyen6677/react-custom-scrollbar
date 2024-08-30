@@ -1,10 +1,10 @@
 {
-  "name": "react-custom-scrollbar",
+  "name": "react-mini-scrollbar",
   "version": "1.0.0",
   "description": "A custom scrollbar component for React",
   "author": "henrynguyen6677",
   "license": "MIT",
-  "repository": "henrynguyen6677/react-custom-scrollbar",
+  "repository": "henrynguyen6677/react-mini-scrollbar",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
