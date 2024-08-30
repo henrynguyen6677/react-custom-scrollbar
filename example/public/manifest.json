@@ -1,6 +1,6 @@
 {
-  "short_name": "react-custom-scrollbar",
-  "name": "react-custom-scrollbar",
+  "short_name": "react-mini-scrollbar",
+  "name": "react-mini-scrollbar",
   "icons": [
     {
       "src": "favicon.ico",

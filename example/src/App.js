@@ -1,7 +1,7 @@
 import React from 'react'
 
-import CustomScrollbar from 'react-custom-scrollbar'
-import 'react-custom-scrollbar/dist/index.css'
+import CustomScrollbar from 'react-mini-scrollbar'
+import 'react-mini-scrollbar/dist/index.css'
 
 const App = () => {
   return (
