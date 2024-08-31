@@ -16,6 +16,7 @@ npm install --save react-mini-scrollbar
 import React, { Component } from 'react'
 
 import CustomScrollbar from 'react-mini-scrollbar'
+import 'react-mini-scrollbar/dist/index.css'
 
 const Example = () => {
   return (
