@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-mini-scrollbar
+yarn add react-mini-scrollbar
 ```
 
 ## Usage
