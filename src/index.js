@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import styles from './CustomScrollbar.module.css'
 
-const CustomScrollbar = ({
+export const CustomScrollbar = ({
   children,
   height = 300,
   thumbColor = '#888',
@@ -52,11 +52,7 @@ const CustomScrollbar = ({
       <svg
         className={styles.svgScrollbar}
         width={trackWidth}
-        height={
-          scrollContainerRef.current
-            ? scrollContainerRef.current.clientHeight
-            : 0
-        }
+        height={scrollContainerRef?.current?.clientHeight ?? 0}
         style={{ right }}
       >
         {/* Track */}
@@ -79,7 +75,7 @@ const CustomScrollbar = ({
           x={Math.floor((trackWidth - thumbWidth) / 2)}
           y={scrollPosition}
           width={thumbWidth}
-          height={thumbHeight}
+          height={`${thumbHeight}`}
           rx={thumbWidth / 2}
           ry={thumbWidth / 2}
           fill={thumbColor}
@@ -88,5 +84,3 @@ const CustomScrollbar = ({
     </div>
   )
 }
-
-export default CustomScrollbar
