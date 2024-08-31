@@ -1,6 +1,6 @@
 import React from 'react'
 import 'react-mini-scrollbar/dist/index.css'
-import { CustomScrollbar } from 'react-mini-scrollbar'
+import { CustomScrollbar } from 'react-mini-scrollbar/dist/index'
 
 const App = () => {
   return (
@@ -21,7 +21,6 @@ const App = () => {
         trackWidth={10}
         height={300}
         isShowTrack={true}
-        className='custom-scrollbar'
       >
         <div
           style={{
