@@ -1,17 +1,20 @@
 import React from 'react'
-
-import CustomScrollbar from 'react-mini-scrollbar'
 import 'react-mini-scrollbar/dist/index.css'
+import { CustomScrollbar } from 'react-mini-scrollbar'
 
 const App = () => {
   return (
     <div
       style={{
-        background: '#f0f0f0'
+        position: 'relative',
+        top: '2rem',
+        margin: 'auto',
+        height: '300px',
+        width: '300px'
       }}
     >
       <CustomScrollbar
-        right={2}
+        right={1}
         thumbColor='#f00'
         trackColor='#0f0'
         thumbWidth={10}
@@ -20,13 +23,13 @@ const App = () => {
         isShowTrack={true}
         className='custom-scrollbar'
       >
-        <div style={{ height: '1000px', width: '100%', background: '#ccc' }}>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            ultricies, nunc nec vehicula ultricies, nunc nec vehicula ultricies,
-            nunc nec vehicula
-          </p>
-        </div>
+        <div
+          style={{
+            height: '500px',
+            width: '100%',
+            background: '#ccc'
+          }}
+        ></div>
       </CustomScrollbar>
     </div>
   )
