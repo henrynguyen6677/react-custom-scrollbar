@@ -50,9 +50,7 @@ export const CustomScrollbar = ({
         scrollContainerRef.current.clientHeight /
         scrollContainerRef.current.scrollHeight
       setThumbHeight(visibleRatio * scrollContainerRef.current.clientHeight)
-      if (thumbHeight >= scrollContainerRef.current.clientHeight) {
-        setVisibleScroll(false)
-      }
+      setVisibleScroll(scrollContainerRef.current.clientHeight > thumbHeight)
     }
   }, [children])
 
