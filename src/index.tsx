@@ -29,6 +29,7 @@ export const CustomScrollbar = ({
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [scrollPosition, setScrollPosition] = useState(0)
   const [thumbHeight, setThumbHeight] = useState(50)
+  const [visibleScroll, setVisibleScroll] = useState(false)
 
   const handleScroll = () => {
     if (scrollContainerRef.current) {
@@ -49,6 +50,9 @@ export const CustomScrollbar = ({
         scrollContainerRef.current.clientHeight /
         scrollContainerRef.current.scrollHeight
       setThumbHeight(visibleRatio * scrollContainerRef.current.clientHeight)
+      if (thumbHeight >= scrollContainerRef.current.clientHeight) {
+        setVisibleScroll(false)
+      }
     }
   }, [children])
 
@@ -67,7 +71,7 @@ export const CustomScrollbar = ({
         className={styles.svgScrollbar}
         width={trackWidth}
         height={scrollContainerRef?.current?.clientHeight ?? 0}
-        style={{ right }}
+        style={{ right, visibility: visibleScroll ? 'visible' : 'hidden' }}
       >
         {/* Track */}
         {
